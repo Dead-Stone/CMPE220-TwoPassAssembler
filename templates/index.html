@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SIC/XE Assembler</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <h1>SIC/XE Assembler</h1>
+    <form action="/assemble" method="post" enctype="multipart/form-data">
+        <textarea name="code" rows="10" cols="50" placeholder="Enter your SIC/XE code here or upload a file below."></textarea><br>
+        <input type="file" name="file" accept=".asm">
+        <button type="submit">Assemble</button>
+    </form>
+</body>
+</html>
