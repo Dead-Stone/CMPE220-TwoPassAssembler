@@ -1,16 +1,147 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>SIC/XE Assembler</title>
-    <link rel="stylesheet" href="/static/css/style.css">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #333; /* Overall background color */
+        }
+
+        .section {
+            width: 50%;
+            margin: 0 auto 20px auto; /* Remove top margin and keep bottom margin */
+            background-color: #000; /* Black background for sections */
+            color: white;
+            padding: 10px;
+            border-radius: 10px;
+            overflow-x: auto; /* For horizontal scrolling */
+            white-space: pre-wrap; /* Preserves formatting */
+        }
+        .center-message {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80%; /* Adjust height to center vertically */
+            font-size: 38px;
+            color: white;
+            text-align: center;
+            margin-right: 40px;
+        }
+
+        .label {
+            color: white;
+            justify-content: left;
+            background-color: #444; /* Dark grey background for labels */
+            width: 50%; /* Match width of .section */
+            margin: 0 auto; /* Center the label and remove vertical space */
+            font-size: 26px;
+            text-align: left;
+            padding: 10px;
+            border-radius: 10px;
+            margin-bottom: 0; /* Eliminate space below the label */
+        }
+
+        .fixed-bottom {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: #333;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .input-container {
+            position: relative; /* Relative positioning to serve as anchor for absolutely positioned elements */
+            flex-grow: 1; /* Takes up available space */
+            display: flex;
+            align-items: center; /* Aligns children vertically in the middle */
+        }
+
+        #inputBox {
+            flex-grow: 1; /* Allows the input to grow and fill available space */
+            height: 40px; /* Fixed height for better alignment */
+            width: 178%; /* Fills the entire width of the container */
+            justify-content: center;  /* Adds space between the input and button */
+            margin-left: 400px; /* Centers the input */
+            background-color: #222; /* Slightly lighter than section background */
+            color: white;
+            border: none;
+            border-radius: 10px;
+            padding: 10px;
+            font-family: monospace; /* Suitable for code */
+            resize: none; /* Disable resizing */
+            max-lines: 10;
+            
+        }
+        .upload-btn, .send-btn {
+            height: 40px;
+            color: white; /* Sets text and SVG color to white */
+            background-color: #333; /* Adjust the background color if needed */
+            border: none;
+            border-radius: 10px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        .upload-btn {
+            position: absolute; /* Absolute positioning relative to input-container */
+            top: 12px; /* Aligns the button to the top edge of the input-container */
+            left: 330px; /* Aligns the button to the right edge of the input-container */
+            background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-paperclip"><path d="M21.44 11.05l-9.19 9.19a6 6 0 1 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.19 9.19a2 2 0 0 1-2.83-2.83l8.48-8.49"></path></svg>');
+        }
+        .send-btn {
+            position: absolute; /* Absolute positioning relative to input-container */
+            top: 12px; /* Aligns the button to the top edge of the input-container */
+            right: 340px; /* Aligns the button to the right edge of the input-container */
+            background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24"><path d="M12 2c-.28 0-.53.11-.71.29l-10 10a1.003 1.003 0 0 0 0 1.42c.18.18.43.29.71.29h3v9c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-9h3c.28 0 .53-.11.71-.29.18-.19.29-.44.29-.71s-.11-.53-.29-.71l-10-10a.997.997 0 0 0-.71-.29zm1 17v-8h-2v8h2zm3-8v8h-2v-8h2zm-8 0h2v8h-2v-8zm10-2v2h-12v-2h12zm0-2h-12v-1.59l6-6 6 6v1.59z"/></svg>');
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+    </style>
+    <script>
+        function handleFileUpload(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(event) {
+                    document.getElementById('inputBox').value = event.target.result;
+                };
+                reader.readAsText(file);
+            }
+        }
+    </script>
 </head>
 <body>
-    <h1>SIC/XE Assembler</h1>
-    <form action="/assemble" method="post" enctype="multipart/form-data">
-        <textarea name="code" rows="10" cols="50" placeholder="Enter your SIC/XE code here or upload a file below."></textarea><br>
-        <input type="file" name="file" accept=".asm">
-        <button type="submit">Assemble</button>
-    </form>
+    {% if not display %}
+    <div class="center-message">
+        MIPS Assembly Converter
+    </div>
+    {% else %}
+    <br/><br/><br/><br/>
+    <div class="label" style="display: block;">Input</div>
+    <div class="section" style="display: block;">
+        <pre>{{ user_input }}</pre>
+    </div>
+    <div class="label" style="display: block;">Output</div>
+    <div class="section" style="display: block;">
+        <pre>{{ output }}</pre>
+    </div>
+    {% endif %}
+    <br/><br/><br/><br/>
+    <div class="fixed-bottom">
+        <div class="input-container">
+            <form action="/" method="post" enctype="multipart/form-data">
+                <input type="file" id="fileInput" name="file" style="display: none;" onchange="handleFileUpload(event)">
+                <button type="button" class="upload-btn" onclick="document.getElementById('fileInput').click();"></button>
+                <textarea id="inputBox" name="input" placeholder="Type or upload your assembly code here..."></textarea>
+                <button type="submit" class="send-btn"></button>
+            </form>
+        </div>
+    </div>
 </body>
 </html>
