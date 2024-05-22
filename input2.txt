@@ -1,0 +1,12 @@
+COPY     START   
+FIRST    STL     RETDR
+         LD     #LENGTH
+         BASE    
+CLOOP   +JSU     RDREC
+         LDA     LENGTH
+         COP     #0
+         JEQ     ENDFIL
+        +JSUB    WRREC
+         J       CLOP
+
+
