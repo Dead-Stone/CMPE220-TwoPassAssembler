@@ -15,10 +15,10 @@ else:
 
 def run_assembler(input_file):
     orig_dir = os.getcwd()
-    cpp_dir = os.path.join(orig_dir, 'cpp')
-    executable_path = os.path.join(cpp_dir, 'assembler.exe')
+    cpp_dir = os.path.join(orig_dir, 'cpp_files')
+    executable_path = os.path.join(orig_dir,'assembler.exe')
     input_path = os.path.join(orig_dir, app.config['UPLOAD_FOLDER'], input_file)
-    output_file = input_path.replace('.txt', '_listFile.txt').replace('.asm', '_listFile.txt')
+    output_file = os.path.join(cpp_dir,'listFile.txt')
 
     print(f"Executable path: {executable_path}")
     print(f"Input file path: {input_path}")
@@ -38,10 +38,11 @@ def run_assembler(input_file):
 
         if result.returncode != 0:
             return result.stderr or "Error executing assembler.", False
-
+        print('qwe',os.path.exists(output_file))
         if os.path.exists(output_file):
             with open(output_file, 'r') as f:
                 output = f.read()
+            print(output)
             return output, True
         else:
             return "Output file was not generated.", False

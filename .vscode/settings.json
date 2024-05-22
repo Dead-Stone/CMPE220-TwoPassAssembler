@@ -2,7 +2,8 @@
     "files.associations": {
         "stack": "cpp",
         "iostream": "cpp",
-        "stdexcept": "cpp"
+        "stdexcept": "cpp",
+        "string": "cpp"
     },
     "CodeGPT.apiKey": "CodeGPT Plus Beta"
 }

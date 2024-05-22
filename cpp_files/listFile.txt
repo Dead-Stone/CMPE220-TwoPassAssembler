@@ -1,0 +1,144 @@
+	 Pass	1 ... 
+
+line number     address        label    op      operands        
+===============================================================
+1               001000         COPY     START   1000            
+2               001000         FIRST    STL     RETADR          
+3               001003         CLOOP    JSUB    RDREC           
+4               001006                  LDA     LENGTH          
+5               001009                  COMP    ZERO            
+6               00100C                  JEQ     ENDFIL          
+7               00100F                  JSUB    WRREC           
+8               001012                  J       CLOOP           
+9               001015         ENDFIL   LDA     EOF             
+10              001018                  STA     BUFFER          
+11              00101B                  LDA     THREE           
+12              00101E                  STA     LENGTH          
+13              001021                  JSUB    WRREC           
+14              001024                  LDL     RETADR          
+15              001027                  RSUB                    
+16              00102A         EOF      BYTE    C'EOF'          
+17              00102D         THREE    WORD    3               
+18              001030         ZERO     WORD    0               
+19              001033         RETADR   RESW    1               
+20              001036         LENGTH   RESW    1               
+21              001039         BUFFER   RESB    4096            
+                               .
+                               .   SUBROUTINE TO READ RECORD INTO BUFFER
+                               .
+22              002039         RDREC    LDX     ZERO            
+23              00203C                  LDA     ZERO            
+24              00203F         RLOOP    TD      INPUT           
+25              002042                  JEQ     RLOOP           
+26              002045                  RD      INPUT           
+27              002048                  COMP    ZERO            
+28              00204B                  JEQ     EXIT            
+29              00204E                  STCH    BUFFERX         
+30              002051                  TIX     MAXLEN          
+31              002054                  JLT     RLOOP           
+32              002057         EXIT     STX     LENGTH          
+33              00205A                  RSUB                    
+34              00205D         INPUT    BYTE    X'F1'           
+35              00205E         MAXLEN   WORD    4096            
+                               .
+                               .   SUBROUTINE TO WRITE RECORD FROM BUFFER
+                               .
+36              002061         WRREC    LDX     ZERO            
+37              002064         WLOOP    TD      OUTPUT          
+38              002067                  JEQ     WLOOP           
+39              00206A                  LDCH    BUFFERX         
+40              00206D                  WD      OUTPUT          
+41              002070                  TIX     LENGTH          
+42              002073                  JLT     WLOOP           
+43              002076                  RSUB                    
+44              002079         OUTPUT   BYTE    X'05'           
+45              00207A                  END     FIRST           
+
+***************************************************************
+
+	 Symbol		 Table		 (values in hex)
+
+=================================
+|	name     address   Abs/Rel	|
+|	--------------------------	|
+|	BUFFER    1039         Rel	|
+|	CLOOP     1003         Rel	|
+|	COPY      1000         Rel	|
+|	ENDFIL    1015         Rel	|
+|	EOF       102A         Rel	|
+|	EXIT      2057         Rel	|
+|	FIRST     1000         Rel	|
+|	INPUT     205D         Rel	|
+|	LENGTH    1036         Rel	|
+|	MAXLEN    205E         Rel	|
+|	OUTPUT    2079         Rel	|
+|	RDREC     2039         Rel	|
+|	RETADR    1033         Rel	|
+|	RLOOP     203F         Rel	|
+|	THREE     102D         Rel	|
+|	WLOOP     2064         Rel	|
+|	WRREC     2061         Rel	|
+|	ZERO      1030         Rel	|
+=================================
+
+*****************************************************************************************
+
+	 Pass	2 ... 
+
+line number     address        label    op      operands        n i x b p e    opcode    
+=========================================================================================
+46              001000         COPY     START   1000                                     
+47              001000         FIRST    STL     RETADR          1 1 0 0 1 0    172030    
+48              001003         CLOOP    JSUB    RDREC                                    
+                ***Too large to store                          
+49              001006                  LDA     LENGTH          1 1 0 0 1 0    3202D     
+50              001009                  COMP    ZERO            1 1 0 0 1 0    2B2024    
+51              00100C                  JEQ     ENDFIL          1 1 0 0 1 0    332006    
+52              00100F                  JSUB    WRREC                                    
+                ***Too large to store                          
+53              001012                  J       CLOOP           1 1 0 0 1 0    3F2FEE    
+54              001015         ENDFIL   LDA     EOF             1 1 0 0 1 0    32012     
+55              001018                  STA     BUFFER          1 1 0 0 1 0    F201E     
+56              00101B                  LDA     THREE           1 1 0 0 1 0    3200F     
+57              00101E                  STA     LENGTH          1 1 0 0 1 0    F2015     
+58              001021                  JSUB    WRREC                                    
+                ***Too large to store                          
+59              001024                  LDL     RETADR          1 1 0 0 1 0    B200C     
+60              001027                  RSUB                    1 1 0 0 0 0    4F0000    
+61              00102A         EOF      BYTE    C'EOF'                         464F45    
+62              00102D         THREE    WORD    3                              000003    
+63              001030         ZERO     WORD    0                              000000    
+64              001033         RETADR   RESW    1                                        
+65              001036         LENGTH   RESW    1                                        
+66              001039         BUFFER   RESB    4096                                     
+67              002039         RDREC    LDX     ZERO                                     
+                ***Too large to store                          
+68              00203C                  LDA     ZERO                                     
+                ***Too large to store                          
+69              00203F         RLOOP    TD      INPUT           1 1 0 0 1 0    E3201B    
+70              002042                  JEQ     RLOOP           1 1 0 0 1 0    332FFA    
+71              002045                  RD      INPUT           1 1 0 0 1 0    DB2015    
+72              002048                  COMP    ZERO                                     
+                ***Too large to store                          
+73              00204B                  JEQ     EXIT            1 1 0 0 1 0    332009    
+74              00204E                  STCH    BUFFERX                                  
+                ***Too large to store                          
+75              002051                  TIX     MAXLEN          1 1 0 0 1 0    2F200A    
+76              002054                  JLT     RLOOP           1 1 0 0 1 0    3B2FE8    
+77              002057         EXIT     STX     LENGTH                                   
+                ***Too large to store                          
+78              00205A                  RSUB                    1 1 0 0 0 0    4F0000    
+79              00205D         INPUT    BYTE    X'F1'                          F1        
+80              00205E         MAXLEN   WORD    4096                           001000    
+81              002061         WRREC    LDX     ZERO                                     
+                ***Too large to store                          
+82              002064         WLOOP    TD      OUTPUT          1 1 0 0 1 0    E32012    
+83              002067                  JEQ     WLOOP           1 1 0 0 1 0    332FFA    
+84              00206A                  LDCH    BUFFERX                                  
+                ***Too large to store                          
+85              00206D                  WD      OUTPUT          1 1 0 0 1 0    DF2009    
+86              002070                  TIX     LENGTH                                   
+                ***Too large to store                          
+87              002073                  JLT     WLOOP           1 1 0 0 1 0    3B2FEE    
+88              002076                  RSUB                    1 1 0 0 0 0    4F0000    
+89              002079         OUTPUT   BYTE    X'05'                          05        
