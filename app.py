@@ -16,7 +16,7 @@ else:
 def run_assembler(input_file):
     orig_dir = os.getcwd()
     cpp_dir = os.path.join(orig_dir, 'cpp_files')
-    executable_path = os.path.join(orig_dir,'assembler.exe')
+    executable_path = os.path.join(cpp_dir,'assembler.exe')
     input_path = os.path.join(orig_dir, app.config['UPLOAD_FOLDER'], input_file)
     output_file = os.path.join(cpp_dir,'listFile.txt')
 
