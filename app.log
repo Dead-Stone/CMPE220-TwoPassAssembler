@@ -1,0 +1,98 @@
+2024-05-22 20:16:42,161 INFO: Application startup
+2024-05-22 20:16:42,162 INFO: Upload folder already exists
+2024-05-22 20:17:14,605 INFO: File saved at: uploads\input.txt
+2024-05-22 20:17:14,606 INFO: Executable path: C:\Users\mohan\Downloads\CMPE220\CMPE220-TwoPassAssembler\cpp_files\assembler.exe
+2024-05-22 20:17:14,606 INFO: Input file path: C:\Users\mohan\Downloads\CMPE220\CMPE220-TwoPassAssembler\uploads\input.txt
+2024-05-22 20:17:14,607 INFO: Expected output file path: C:\Users\mohan\Downloads\CMPE220\CMPE220-TwoPassAssembler\cpp_files\listFile.txt
+2024-05-22 20:17:14,608 INFO: Executing subprocess...
+2024-05-22 20:17:14,625 INFO: Subprocess finished. Return code: 0
+2024-05-22 20:17:14,625 ERROR: Subprocess stderr: 
+2024-05-22 20:18:03,305 INFO: File saved at: uploads\input.txt
+2024-05-22 20:18:03,306 INFO: Executable path: C:\Users\mohan\Downloads\CMPE220\CMPE220-TwoPassAssembler\cpp_files\assembler.exe
+2024-05-22 20:18:03,306 INFO: Input file path: C:\Users\mohan\Downloads\CMPE220\CMPE220-TwoPassAssembler\uploads\input.txt
+2024-05-22 20:18:03,307 INFO: Expected output file path: C:\Users\mohan\Downloads\CMPE220\CMPE220-TwoPassAssembler\cpp_files\listFile.txt
+2024-05-22 20:18:03,307 INFO: Executing subprocess...
+2024-05-22 20:18:03,320 INFO: Subprocess finished. Return code: 0
+2024-05-22 20:18:03,321 ERROR: Subprocess stderr: 
+2024-05-22 20:18:09,352 INFO: Application startup
+2024-05-22 20:18:09,352 INFO: Upload folder already exists
+2024-05-22 20:18:12,933 INFO: File saved at: uploads\input.txt
+2024-05-22 20:18:12,934 INFO: Executable path: C:\Users\mohan\Downloads\CMPE220\CMPE220-TwoPassAssembler\cpp_files\assembler.exe
+2024-05-22 20:18:12,934 INFO: Input file path: C:\Users\mohan\Downloads\CMPE220\CMPE220-TwoPassAssembler\uploads\input.txt
+2024-05-22 20:18:12,934 INFO: Expected output file path: C:\Users\mohan\Downloads\CMPE220\CMPE220-TwoPassAssembler\cpp_files\listFile.txt
+2024-05-22 20:18:12,935 INFO: Executing subprocess...
+2024-05-22 20:18:12,952 INFO: Subprocess finished. Return code: 0
+2024-05-22 20:18:12,952 ERROR: Subprocess stderr: 
+2024-05-22 20:18:19,665 INFO: File saved at: uploads\input2.txt
+2024-05-22 20:18:19,665 INFO: Executable path: C:\Users\mohan\Downloads\CMPE220\CMPE220-TwoPassAssembler\cpp_files\assembler.exe
+2024-05-22 20:18:19,667 INFO: Input file path: C:\Users\mohan\Downloads\CMPE220\CMPE220-TwoPassAssembler\uploads\input2.txt
+2024-05-22 20:18:19,667 INFO: Expected output file path: C:\Users\mohan\Downloads\CMPE220\CMPE220-TwoPassAssembler\cpp_files\listFile.txt
+2024-05-22 20:18:19,668 INFO: Executing subprocess...
+2024-05-22 20:18:19,696 INFO: Subprocess finished. Return code: 0
+2024-05-22 20:18:19,698 ERROR: Subprocess stderr: 
+2024-05-22 20:28:06,919 INFO: Application startup
+2024-05-22 20:28:06,919 INFO: Upload folder already exists
+2024-05-22 20:28:16,106 INFO: File saved at: uploads\input.txt
+2024-05-22 20:28:16,106 INFO: Executable path: C:\Users\mohan\Downloads\CMPE220\CMPE220-TwoPassAssembler\cpp_files\assembler.exe
+2024-05-22 20:28:16,107 INFO: Input file path: C:\Users\mohan\Downloads\CMPE220\CMPE220-TwoPassAssembler\uploads\input.txt
+2024-05-22 20:28:16,107 INFO: Expected output file path: C:\Users\mohan\Downloads\CMPE220\CMPE220-TwoPassAssembler\cpp_files\listFile.txt
+2024-05-22 20:28:16,108 INFO: Executing subprocess...
+2024-05-22 20:28:16,484 INFO: Subprocess finished. Return code: 0
+2024-05-22 20:28:16,485 ERROR: Subprocess stderr: 
+2024-05-22 20:39:39,534 INFO: Application startup
+2024-05-22 20:39:39,536 INFO: Upload folder already exists
+2024-05-22 20:39:49,559 INFO: File saved at: uploads\input.txt
+2024-05-22 20:39:49,560 INFO: Executable path: C:\Users\mohan\Downloads\CMPE220\CMPE220-TwoPassAssembler\cpp_files\assembler.exe
+2024-05-22 20:39:49,561 INFO: Input file path: C:\Users\mohan\Downloads\CMPE220\CMPE220-TwoPassAssembler\uploads\input.txt
+2024-05-22 20:39:49,562 INFO: Expected output file path: C:\Users\mohan\Downloads\CMPE220\CMPE220-TwoPassAssembler\cpp_files\listFile.txt
+2024-05-22 20:39:49,562 INFO: Executing subprocess...
+2024-05-22 20:39:49,599 INFO: Subprocess finished. Return code: 0
+2024-05-22 20:39:49,599 ERROR: Subprocess stderr: 
+2024-05-22 20:39:58,393 INFO: File saved at: uploads\input2.txt
+2024-05-22 20:39:58,394 INFO: Executable path: C:\Users\mohan\Downloads\CMPE220\CMPE220-TwoPassAssembler\cpp_files\assembler.exe
+2024-05-22 20:39:58,394 INFO: Input file path: C:\Users\mohan\Downloads\CMPE220\CMPE220-TwoPassAssembler\uploads\input2.txt
+2024-05-22 20:39:58,395 INFO: Expected output file path: C:\Users\mohan\Downloads\CMPE220\CMPE220-TwoPassAssembler\cpp_files\listFile.txt
+2024-05-22 20:39:58,395 INFO: Executing subprocess...
+2024-05-22 20:39:58,432 INFO: Subprocess finished. Return code: 0
+2024-05-22 20:39:58,433 ERROR: Subprocess stderr: 
+2024-05-22 20:40:37,098 INFO: File saved at: uploads\input2.txt
+2024-05-22 20:40:37,098 INFO: Executable path: C:\Users\mohan\Downloads\CMPE220\CMPE220-TwoPassAssembler\cpp_files\assembler.exe
+2024-05-22 20:40:37,098 INFO: Input file path: C:\Users\mohan\Downloads\CMPE220\CMPE220-TwoPassAssembler\uploads\input2.txt
+2024-05-22 20:40:37,099 INFO: Expected output file path: C:\Users\mohan\Downloads\CMPE220\CMPE220-TwoPassAssembler\cpp_files\listFile.txt
+2024-05-22 20:40:37,099 INFO: Executing subprocess...
+2024-05-22 20:40:37,133 INFO: Subprocess finished. Return code: 0
+2024-05-22 20:40:37,133 ERROR: Subprocess stderr: 
+2024-05-22 20:40:56,536 INFO: File saved at: uploads\input2.txt
+2024-05-22 20:40:56,537 INFO: Executable path: C:\Users\mohan\Downloads\CMPE220\CMPE220-TwoPassAssembler\cpp_files\assembler.exe
+2024-05-22 20:40:56,537 INFO: Input file path: C:\Users\mohan\Downloads\CMPE220\CMPE220-TwoPassAssembler\uploads\input2.txt
+2024-05-22 20:40:56,537 INFO: Expected output file path: C:\Users\mohan\Downloads\CMPE220\CMPE220-TwoPassAssembler\cpp_files\listFile.txt
+2024-05-22 20:40:56,539 INFO: Executing subprocess...
+2024-05-22 20:40:56,577 INFO: Subprocess finished. Return code: 0
+2024-05-22 20:40:56,578 ERROR: Subprocess stderr: 
+2024-05-22 20:41:05,173 INFO: Application startup
+2024-05-22 20:41:05,174 INFO: Upload folder already exists
+2024-05-22 20:41:09,659 INFO: File saved at: uploads\input2.txt
+2024-05-22 20:41:09,659 INFO: Executable path: C:\Users\mohan\Downloads\CMPE220\CMPE220-TwoPassAssembler\cpp_files\assembler.exe
+2024-05-22 20:41:09,660 INFO: Input file path: C:\Users\mohan\Downloads\CMPE220\CMPE220-TwoPassAssembler\uploads\input2.txt
+2024-05-22 20:41:09,660 INFO: Expected output file path: C:\Users\mohan\Downloads\CMPE220\CMPE220-TwoPassAssembler\cpp_files\listFile.txt
+2024-05-22 20:41:09,660 INFO: Executing subprocess...
+2024-05-22 20:41:09,698 INFO: Subprocess finished. Return code: 0
+2024-05-22 20:41:09,699 ERROR: Subprocess stderr: 
+2024-05-22 20:41:22,029 INFO: Application startup
+2024-05-22 20:41:22,029 INFO: Upload folder already exists
+2024-05-22 20:41:25,234 INFO: File saved at: uploads\input2.txt
+2024-05-22 20:41:25,234 INFO: Executable path: C:\Users\mohan\Downloads\CMPE220\CMPE220-TwoPassAssembler\cpp_files\assembler.exe
+2024-05-22 20:41:25,234 INFO: Input file path: C:\Users\mohan\Downloads\CMPE220\CMPE220-TwoPassAssembler\uploads\input2.txt
+2024-05-22 20:41:25,235 INFO: Expected output file path: C:\Users\mohan\Downloads\CMPE220\CMPE220-TwoPassAssembler\cpp_files\listFile.txt
+2024-05-22 20:41:25,236 INFO: Executing subprocess...
+2024-05-22 20:41:25,271 INFO: Subprocess finished. Return code: 0
+2024-05-22 20:41:25,272 ERROR: Subprocess stderr: 
+2024-05-22 20:57:28,672 INFO: Application startup
+2024-05-22 20:57:28,673 INFO: Upload folder already exists
+2024-05-22 21:08:28,585 INFO: File saved at: uploads\input.txt
+2024-05-22 21:08:28,585 INFO: Executable path: C:\Users\mohan\Downloads\CMPE220\CMPE220-TwoPassAssembler\cpp_files\assembler.exe
+2024-05-22 21:08:28,586 INFO: Input file path: C:\Users\mohan\Downloads\CMPE220\CMPE220-TwoPassAssembler\uploads\input.txt
+2024-05-22 21:08:28,586 INFO: Expected output file path: C:\Users\mohan\Downloads\CMPE220\CMPE220-TwoPassAssembler\cpp_files\listFile.txt
+2024-05-22 21:08:28,587 INFO: Executing subprocess...
+2024-05-22 21:08:28,712 INFO: Subprocess finished. Return code: 0
+2024-05-22 21:08:28,713 ERROR: Subprocess stderr: 
